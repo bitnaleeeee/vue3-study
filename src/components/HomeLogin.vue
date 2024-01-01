@@ -6,11 +6,7 @@
       <div v-if="commmandList" class="command-search">
         <h5>인기 급상승 검색어</h5>
         <ul>
-          <li>토트넘 사르 부상</li>
-          <li>토트넘 손흥민 골</li>
-          <li>야마토 타케루 페그 오</li>
-          <li>갑진년 좋은 띠</li>
-          <li>갑진년 띠별 운세</li>
+          <li v-for="list in titleLsit" :key="list">{{ list }}</li>
         </ul>
       </div>
     </div>
@@ -26,11 +22,11 @@ onMounted(() => {
 });
 
 const commmandList = ref(false);
-
+const titleLsit = ref([]);
 const setCateList = async () => {
   try {
     const res = await axios.get(`http://localhost:8080/data/data.json`);
-    console.log(res.data);
+    titleLsit.value = res.data;
   } catch (err) {
     console.log("에러");
   }
