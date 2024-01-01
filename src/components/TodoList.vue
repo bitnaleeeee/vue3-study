@@ -80,12 +80,22 @@
             <h2 class="table-title">상담내역</h2>
           </div>
           <table class="table">
-            <tr>
-              <td>날짜</td>
-              <td>고객 행동</td>
-            </tr>
-
-            <tr v-for="item in userData" v-bind:key="item"></tr>
+            <colgroup>
+              <col width="20%" />
+              <col width="*" />
+            </colgroup>
+            <thead>
+              <tr>
+                <td>날짜</td>
+                <td>고객 행동</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="item in adviceData" v-bind:key="item">
+                <td>{{ item.date }}</td>
+                <td>{{ item.adviceInfo }}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
