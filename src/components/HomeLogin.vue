@@ -18,9 +18,23 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import axios from "axios";
+
+onMounted(() => {
+  setCateList();
+});
 
 const commmandList = ref(false);
+
+const setCateList = async () => {
+  try {
+    const res = await axios.get(`http://localhost:8080/data/data.json`);
+    console.log(res.data);
+  } catch (err) {
+    console.log("에러");
+  }
+};
 
 function toggleClass() {
   commmandList.value = true;
