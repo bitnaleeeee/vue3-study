@@ -13,6 +13,11 @@ const router = createRouter({
       name: "Todolist",
       component: () => import("../components/TodoList.vue"),
     },
+    {
+      path: "/usersearch",
+      name: "UserSearch",
+      component: () => import("../components/UserSearch.vue"),
+    },
   ],
 });
 
