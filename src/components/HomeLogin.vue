@@ -55,6 +55,7 @@ function closeSearch(e) {
 .contet-wrap .search-wrap {
   text-align: center;
 }
+
 .contet-wrap .search-wrap .serarch-bar {
   width: 300px;
   border-radius: 10px;

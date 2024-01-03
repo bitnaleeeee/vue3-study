@@ -1,0 +1,47 @@
+/*
+ui-animation-array
+*/
+.ui-component.ui-animation-array-items  > .fade-up-enter-active,
+.ui-component.ui-animation-array-items > .fade-up-leave-active,
+.ui-component.ui-animation-array-items > .fade-up-move{
+  transition: opacity 0.38s, transform 0.5s ease-in-out ;
+}
+
+.ui-component.ui-animation-array-items > .fade-up-leave-active {
+  /*
+  position: absolute;
+*/
+}
+
+.ui-component.ui-animation-array-items>.fade-up-enter-from ,
+.ui-component.ui-animation-array-items > .fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(15px) scaleY(1.07);
+}
+
+.ui-component.ui-animation-array-items > .fade-up-leave-from,
+.ui-component.ui-animation-array-items > .fade-up-enter-to {
+  opacity: 1;
+  transform: translateY(0) scaleY(1)
+}
+
+
+
+
+.ui-component.ui-animation-array-items>.grid-fade-up-enter-active,
+.ui-component.ui-animation-array-items>.grid-fade-up-leave-active,
+.ui-component.ui-animation-array-items>.grid-fade-up-move {
+  transition: opacity 0.38s, transform 0.5s ease;
+}
+
+.ui-component.ui-animation-array-items>.grid-fade-up-enter-from,
+.ui-component.ui-animation-array-items>.grid-fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(7%);
+}
+
+.ui-component.ui-animation-array-items>.grid-fade-up-leave-from,
+.ui-component.ui-animation-array-items>.grid-fade-up-enter-to {
+  opacity: 1;
+  transform: translateY(0)
+}

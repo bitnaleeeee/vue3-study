@@ -1,0 +1,36 @@
+.ui-context .mx-context-menu-item-wrapper .mx-context-menu-item {
+    padding: 6px 20px;
+}
+
+.ui-context {
+    box-shadow: none;
+    border: 1px solid #eaeaea;
+    border-radius: var(--radius);
+
+}
+
+
+.context-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    border: 1px solid #eaeaea;
+    gap: 0.5rem;
+    user-select: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+    margin-top: 0.1rem;
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+}
+
+.context-item>* {
+    margin: 0;
+}
+
+.context-item.active,
+.context-item:hover {
+    background: rgb(242, 245, 249);
+}
